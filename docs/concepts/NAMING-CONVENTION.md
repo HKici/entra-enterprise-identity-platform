@@ -1,6 +1,6 @@
 # Naming Convention
 
-Status: **Entwurf**
+Status: **Entwurf (IAM-002)**
 
 ## Grundsatz
 
@@ -8,15 +8,46 @@ Dokumentation und Business-Bezeichnungen verwenden deutsche Begriffe. Technische
 
 ## Beispiele
 
-### Gruppen
+### Security Groups
+
+Das Schema einer Security Group lautet:
 
 ```text
-GRP-Warehouse-North-Users
-GRP-Warehouse-South-Users
-GRP-Store-Users
-GRP-External-Contractors
-GRP-Privileged-Admins
+GRP-<Category>-<Name>[-<Qualifier>]
 ```
+
+`<Category>` beschreibt genau eine der folgenden Semantiken:
+
+| Kategorie | Bedeutung | Muster |
+| --- | --- | --- |
+| `Persona` | Identitäts- bzw. Beschäftigungstyp | `GRP-Persona-<Persona>` |
+| `Site` | Organisatorischer Standort | `GRP-Site-<Site>` |
+| `BusinessRole` | Fachliche Funktion ohne direkte technische Berechtigung | `GRP-BusinessRole-<Role>` |
+| `Access-App` | Konkretes Zugriffsprofil einer Anwendung | `GRP-Access-App-<Application>-<AccessProfile>` |
+| `Access-Resource` | Konkretes Zugriffsprofil auf eine Ressource | `GRP-Access-Resource-<Resource>-<AccessLevel>` |
+
+Beispiele:
+
+```text
+GRP-Persona-Office-Users
+GRP-Persona-Warehouse-Users
+GRP-Persona-Store-Users
+GRP-Persona-External-Contractors
+GRP-Persona-Privileged-Administrators
+GRP-Site-Hamburg
+GRP-Site-Warehouse-North
+GRP-Site-Warehouse-South
+GRP-Site-Store-<StoreCode>
+GRP-BusinessRole-Store-Manager
+GRP-Access-App-<Application>-<AccessProfile>
+GRP-Access-Resource-<Resource>-<AccessLevel>
+```
+
+Platzhalter in spitzen Klammern beschreiben die Namensform und sind keine produktiven Namen. Standort, Persona, fachliche Rolle und Zugriff werden nicht in einer einzelnen Gruppe kombiniert. Eine Ausnahme ist nur bei einer Access Group zulässig, wenn der Standort den tatsächlich begrenzten Umfang der benannten Ressource beschreibt und dies dokumentiert ist.
+
+### Rollen und Application Roles
+
+Entra Directory Roles und Application Roles sind keine Security Groups und verwenden deshalb nicht das Präfix `GRP`. Ihre konkrete Benennung und Zuweisung werden im Rollenmodell beziehungsweise Application Onboarding festgelegt. `GRP-BusinessRole-*` beschreibt ausschließlich eine fachliche Funktion und ist keine Entra Directory Role.
 
 ### Conditional Access
 
@@ -38,8 +69,9 @@ AU-Stores
 
 ## Noch zu entscheiden
 
-- Präfixe für App-Rollen
-- dynamische Gruppen
-- Lifecycle-Workflows
-- Access Packages
-- Enterprise Applications
+- verbindliche technische Kennungen für Anwendungen, Access Profiles und Ressourcen
+- Owner- und Review-Modell für Gruppen
+- Zulässigkeit und technische Grenzen von Gruppenverschachtelung
+- Voraussetzungen und zulässige Einsätze dynamischer Gruppen nach der SoA-Entscheidung
+- Rollenmodell, PIM und mögliche role-assignable groups
+- Lifecycle-Workflows, Access Packages und Enterprise Applications
