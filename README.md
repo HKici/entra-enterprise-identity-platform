@@ -32,6 +32,7 @@ Die bestehende Identity-Landschaft ist hybrid. Microsoft Entra ID soll schrittwe
 7. Lernplattform für Enterprise IAM und Microsoft Entra ID
 8. Professionelles technisches Portfolio mit verständlichen Architekturdiagrammen
 9. Berücksichtigung von NIS2- und KRITIS-orientierten Security- und Governance-Anforderungen
+
 ## Technische Schwerpunkte
 
 - Microsoft Entra ID
