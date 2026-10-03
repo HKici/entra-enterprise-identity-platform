@@ -6,7 +6,7 @@ Status: **Entwurf (IAM-002)**
 
 Dieses Dokument beschreibt ein nachvollziehbares Gruppenmodell für die Nordstern Handelsgruppe. Es trennt Personen- und Standortzugehörigkeit, fachliche Rollen sowie technische Zugriffszuweisungen. Das Modell dient als fachliche Referenz; es erzeugt keine Gruppen und legt keine produktive Entra-Konfiguration fest.
 
-Der Entwurf setzt weder einen Source of Authority noch ein Synchronisationsmodell voraus. Die spätere technische Mitgliedschaftsverwaltung ist von `IAM-004` und dem Joiner/Mover/Leaver-Prozess abhängig.
+Der Entwurf verwendet das in ADR-0005 vorgeschlagene Source-of-Authority-Modell für Beschäftigungs- und Standortattribute. Die technische Mitgliedschaftsverwaltung sowie das Synchronisationsmodell bleiben vom Architektur- und Security-Review, der Attributqualität und dem Joiner/Mover/Leaver-Prozess abhängig.
 
 ## Begriffe und Abgrenzung
 
@@ -80,7 +80,7 @@ Privilegierte Entra Directory Roles werden nicht aus der Zugehörigkeit zu `GRP-
 
 ## Mitgliedschaft und dynamische Gruppen
 
-Mit `IAM-002` wird keine technische Mitgliedschaftsquelle festgelegt. Bis Source of Authority, Attributqualität und Lifecycle-Prozess entschieden sind, ist für jede Gruppe eine nachvollziehbar verwaltete statische Mitgliedschaft vorzusehen.
+Mit `IAM-002` wird keine technische Mitgliedschaftsquelle festgelegt. Bis ADR-0005 angenommen, Attributqualität bewertet und der Lifecycle-Prozess entschieden sind, ist für jede Gruppe eine nachvollziehbar verwaltete statische Mitgliedschaft vorzusehen.
 
 Dynamische Gruppen sind nur dann zu bewerten, wenn alle folgenden Voraussetzungen erfüllt sind:
 
@@ -102,7 +102,7 @@ Für Persona- oder Standortgruppen kann eine spätere dynamische Mitgliedschaft 
 
 ## Offene Architekturfragen und Abhängigkeiten
 
-- `IAM-004`: Source of Authority, Synchronisationsmodell und die authoritative Pflege von Gruppenattributen.
+- `IAM-004`: ADR-0005 schlägt die Attributautorität vor; Synchronisationsmodell und technische Mitgliedschaftsverwaltung bleiben offen.
 - `IAM-003`: Ob und wie Administrative Units für delegierte Verwaltung eingesetzt werden; dieses Gruppenmodell legt keine Administrative Units fest.
 - `GOV-001` bis `GOV-005`: JML-Auslöser, Ownership, Access Reviews, Entitlement Management und PIM.
 - Application-Onboarding-Phase: Verbindliche Kennungen für Anwendungen, Access Profiles und die Zuordnung von Application Roles.

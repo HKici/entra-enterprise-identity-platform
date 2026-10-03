@@ -49,7 +49,7 @@ Eine AU kann Benutzer, Gruppen und Geräte enthalten. Für Lager und Filialen so
 - Shared Devices, Scanner oder andere Geräte, sofern die delegierte Rolle die zugehörige Entra-Geräteverwaltung unterstützt;
 - Gruppenobjekte nur dann, wenn deren Eigenschaften oder Mitgliedschaften lokal verwaltet werden müssen.
 
-Die Mitgliedschaftsquelle und eine mögliche Automatisierung werden nicht entschieden. Bis `IAM-004` den Source of Authority und `GOV-001` den Lifecycle festlegt, ist die AU-Mitgliedschaft kontrolliert und nachvollziehbar zu pflegen. Dynamische AU-Mitgliedschaft wird in diesem Entwurf nicht verwendet: Sie setzt belastbare Attribute voraus und kann für Benutzer oder Geräte, nicht jedoch für Gruppen, regelbasiert definiert werden. [Microsoft Learn: dynamische AU-Mitgliedschaft](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/admin-units-members-dynamic)
+Die Mitgliedschaftsquelle und eine mögliche Automatisierung werden nicht entschieden. ADR-0005 ordnet Beschäftigungs- und Standortattribute einer Quelle zu; bis zu seiner Annahme, der Attributqualitätsprüfung und der Festlegung von `GOV-001` ist die AU-Mitgliedschaft kontrolliert und nachvollziehbar zu pflegen. Dynamische AU-Mitgliedschaft wird in diesem Entwurf nicht verwendet: Sie setzt belastbare Attribute voraus und kann für Benutzer oder Geräte, nicht jedoch für Gruppen, regelbasiert definiert werden. [Microsoft Learn: dynamische AU-Mitgliedschaft](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/admin-units-members-dynamic)
 
 ## Delegierte Administration und Rollenscope
 
@@ -102,7 +102,7 @@ Diese Alternative ist ungeeignet. Security Groups unterstützen Personen- und Zu
 
 ## Offene Architekturfragen und Abhängigkeiten
 
-- `IAM-004`: Authoritative Quelle und Lifecycle der Benutzer-, Geräte- und Gruppenobjekte für eine spätere AU-Mitgliedschaft.
+- `IAM-004`: ADR-0005 schlägt die Attributautorität vor; technische Synchronisation und Device-Inventory-Quelle für eine spätere AU-Mitgliedschaft bleiben offen.
 - `GOV-001` bis `GOV-005`: Owner, Joiner/Mover/Leaver, Access Reviews, PIM und zeitliche Aktivierung delegierter Rollen.
 - Exakter lokaler Supportumfang für Lager Nord, Lager Süd und Filialen sowie die verantwortlichen Teams.
 - Konkrete Rollenmatrix, Lizenzprüfung und nichtproduktiver Test der unterstützten Rollen und Verwaltungsportale.
