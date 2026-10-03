@@ -61,7 +61,27 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 ---
 
-### IAM-005 – Erste Architekturdiagramme erstellen
+### IAM-005 – Hybrid Identity Design
+
+**Status:** Review
+**Ziel:** Hybrid-Identity-Zielmodell und Auswahlkriterien für Microsoft Entra Connect Sync und Microsoft Entra Cloud Sync dokumentieren.
+
+**Akzeptanzkriterien:**
+
+- Synchronisationsscope und cloud-only Objekte abgegrenzt
+- Attribute, Korrelation und Duplicate Prevention dokumentiert
+- Connect Sync und Cloud Sync auf Architekturebene verglichen
+- Migration, Koexistenz, Writeback und JML-Abhängigkeiten bewertet
+- ADR mit Auswahlkriterien, aber ohne voreilige Produktentscheidung
+
+**Dateien:**
+
+- `docs/architecture/HYBRID-IDENTITY-DESIGN.md`
+- `docs/adr/0006-hybrid-identity-design-und-sync-auswahlkriterien.md`
+
+---
+
+### IAM-006 – Erste Architekturdiagramme erstellen
 
 **Status:** Ready after IAM-001  
 **Ziel:** erste Diagramme für Standortmodell und Personas erstellen.

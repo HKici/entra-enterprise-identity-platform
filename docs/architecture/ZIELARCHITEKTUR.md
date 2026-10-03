@@ -43,7 +43,7 @@ Privilegierte Tätigkeiten werden mit separaten administrativen Identitäten dur
 ## Noch offene Architekturentscheidungen
 
 - Source-of-Authority-Modell (in ADR-0005 mit Status `Proposed`; technische Konkretisierung offen)
-- Entra Connect vs. Cloud Sync
+- Auswahl zwischen Entra Connect Sync und Cloud Sync (ADR-0006, Status `Proposed`)
 - Ausgestaltung Administrative Units
 - Modell für Lager-/Filialidentitäten
 - gruppenbasierte vs. attributbasierte Zuweisungen
