@@ -2,7 +2,7 @@
 
 Referenzprojekt für den Entwurf einer skalierbaren Microsoft-Entra-ID-IAM-Plattform in einem fiktiven deutschen Handelsunternehmen.
 
-Das Projekt verbindet **Identity Architecture**, **Conditional Access**, **Identity Governance**, **Application Onboarding**, **Microsoft Graph**, **PowerShell** und **Git-basierte Änderungsprozesse**.
+Das Projekt verbindet **Identity Architecture**, **Conditional Access**, **Identity Governance**, **Application Onboarding**, **Microsoft Graph**, **PowerShell**, **Git** und nachvollziehbare Architekturentscheidungen.
 
 > Ziel ist nicht, eine produktive Umgebung 1:1 abzubilden, sondern Architekturentscheidungen, Sicherheitsprinzipien und Automatisierung nachvollziehbar zu dokumentieren und praktisch umzusetzen.
 
@@ -21,7 +21,7 @@ Die fiktive **Nordstern Handelsgruppe GmbH** betreibt:
 
 Die bestehende Identity-Landschaft ist hybrid. Microsoft Entra ID soll schrittweise zur zentralen Identity- und Access-Plattform ausgebaut werden.
 
-## Ziele
+## Projektziele
 
 1. Einheitliche Identity- und Access-Standards
 2. Sichere und nachvollziehbare Conditional-Access-Baseline
@@ -30,6 +30,7 @@ Die bestehende Identity-Landschaft ist hybrid. Microsoft Entra ID soll schrittwe
 5. Nachvollziehbare Architekturentscheidungen über ADRs
 6. Wiederholbare Änderungen über Git und Pull Requests
 7. Lernplattform für Enterprise IAM und Microsoft Entra ID
+8. Professionelles technisches Portfolio mit verständlichen Architekturdiagrammen
 
 ## Technische Schwerpunkte
 
@@ -42,29 +43,48 @@ Die bestehende Identity-Landschaft ist hybrid. Microsoft Entra ID soll schrittwe
 - SAML / OIDC / OAuth 2.0
 - SCIM
 - Hybrid Identity
-- Infrastructure / Configuration as Code
+- Configuration as Code
 - Git
 - Security Architecture
+
+## Arbeitsweise mit Codex
+
+Codex arbeitet in diesem Repository **nicht autonom an der gesamten Roadmap**.
+
+Vor jeder größeren Implementierung:
+
+1. relevanten Task in `TASKS.md` auswählen,
+2. zugehörige Fach- und Architekturdokumentation lesen,
+3. prüfen, ob ein ADR nötig ist,
+4. kleine, überprüfbare Änderung implementieren,
+5. Tests/Dokumentation aktualisieren,
+6. Änderung als logisch abgegrenzten Commit vorbereiten.
+
+Die verbindlichen Regeln stehen in [`AGENTS.md`](AGENTS.md).
 
 ## Repository-Struktur
 
 ```text
 .
 ├── AGENTS.md
+├── TASKS.md
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── README.md
 ├── docs/
+│   ├── adr/
 │   ├── architecture/
 │   ├── concepts/
+│   ├── diagrams/
+│   │   ├── source/
+│   │   └── rendered/
 │   ├── project/
-│   ├── security/
-│   └── adr/
+│   └── security/
 ├── src/
+│   ├── applications/
 │   ├── conditional-access/
 │   ├── governance/
-│   ├── graph/
-│   └── applications/
+│   └── graph/
 ├── tests/
 └── examples/
     └── nordstern-handelsgruppe/
@@ -76,7 +96,12 @@ Die bestehende Identity-Landschaft ist hybrid. Microsoft Entra ID soll schrittwe
 
 Die fachliche und technische Basis wird definiert. Produktive Automatisierung folgt erst, nachdem Architektur, Naming, Rollenmodell und Sicherheitsprinzipien dokumentiert wurden.
 
-Siehe [Projektplan](docs/project/PROJEKTPLAN.md).
+Siehe:
+
+- [Projektplan](docs/project/PROJEKTPLAN.md)
+- [Codex Workflow](docs/project/CODEX-WORKFLOW.md)
+- [Diagramm-Konventionen](docs/project/DIAGRAMME.md)
+- [Lernplan](docs/project/LERNPLAN.md)
 
 ## Sicherheitsprinzip
 

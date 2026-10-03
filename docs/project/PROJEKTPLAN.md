@@ -23,6 +23,8 @@ Das Projekt soll gleichzeitig:
 - [x] ADR-Prozess
 - [x] Security-Grundsätze
 - [ ] detaillierte Personas
+- [x] Codex Task Workflow
+- [x] Diagramm-Konventionen
 - [ ] Gruppen- und Rollenmodell
 - [ ] Naming Convention
 - [ ] Tenant-Zielarchitektur
