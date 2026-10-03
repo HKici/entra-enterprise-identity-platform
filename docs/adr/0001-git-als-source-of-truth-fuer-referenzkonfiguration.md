@@ -39,7 +39,7 @@ Verworfen, da Architekturabsicht und Änderungshistorie nicht ausreichend abgebi
 ### Positiv
 
 - klare Änderungshistorie
-- Portfolio-tauglicher Engineering-Prozess
+- nachvollziehbarer Engineering-Prozess
 - Grundlage für Drift Detection
 
 ### Negativ

@@ -6,9 +6,9 @@ Aufbau einer nachvollziehbaren Referenzarchitektur für eine Enterprise-IAM-Plat
 
 Das Projekt soll gleichzeitig:
 
-1. technische Fähigkeiten demonstrieren,
+1. Enterprise-IAM-Architektur- und Engineering-Praktiken validieren,
 2. Architekturentscheidungen dokumentieren,
-3. als Lernumgebung dienen,
+3. die Weiterentwicklung von Enterprise-IAM-Architekturmustern unterstützen,
 4. sichere Automatisierung mit Microsoft Graph zeigen.
 
 ---
@@ -113,7 +113,7 @@ Zusätzlich:
 
 ---
 
-## Phase 6 – Portfolio Release 1.0
+## Phase 6 – Reference Release 1.0
 
 - [ ] Architekturdiagramme
 - [ ] End-to-End Demo

@@ -2,7 +2,7 @@
 
 ## Zweck
 
-Dieses Repository ist ein Enterprise-IAM-Lern- und Referenzprojekt mit Fokus auf Microsoft Entra ID.
+Dieses Repository ist ein Enterprise-IAM-Referenz- und Architekturprojekt mit Fokus auf Microsoft Entra ID.
 
 Codex und andere Coding-Assistenten dürfen bei Implementierung, Tests und Dokumentation unterstützen. Architektur- und Sicherheitsentscheidungen müssen jedoch nachvollziehbar begründet und bei Bedarf in ADRs dokumentiert werden.
 
