@@ -12,7 +12,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Interne Mitarbeitende der zentralen Funktionen in Hamburg, darunter Einkauf, Finanzen, HR, IT, Informationssicherheit, Vertrieb und Geschäftsführung. Administrative Aufgaben sind keine Regelaufgabe dieser Persona.
 - **Administrativer Kontext:** Diese Persona erhält keine administrativen Plattformrechte aus der Zugehörigkeit zur Zentrale. Erforderliche administrative Tätigkeiten gehören zur separaten Persona „Privileged Administrator“.
-- **Identity Source:** Workforce-Identität. Der primäre Source of Authority und das Synchronisationsmodell sind in `IAM-004` noch festzulegen.
+- **Identity Source:** Workforce-Identität. HR führt Beschäftigungs-, Organisations- und soweit vorhanden Standortattribute; AD ist bei Bedarf für technisch notwendige On-Premises-Kontoattribute authoritative, solange kein späteres Cloud-first-SoA-Modell dies ablöst; Entra führt Cloud-Zugriffsattribute gemäß [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md). Die Synchronisationstechnologie bleibt offen.
 - **Typische Endgeräte:** Überwiegend persönliche Büroarbeitsplätze; ein verbindlicher Device-Management- und Compliance-Standard ist noch nicht entschieden.
 - **Typische Anwendungen:** Kollaboration und Kommunikation sowie zentrale Fachanwendungen für die jeweilige Funktion, etwa Einkauf, Finanzen, HR oder Vertrieb.
 - **Authentifizierungsanforderungen:** Standardisierte, für Büroarbeit geeignete Anmeldung mit zusätzlicher Absicherung entsprechend Risiko, Ressource und Gerätezustand. Konkrete Methoden und Authentication Strengths sind noch nicht festgelegt.
@@ -24,7 +24,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Interne Logistikmitarbeitende im Schichtbetrieb am großen norddeutschen Logistikstandort. Die eingeschränkte lokale IT-Unterstützung und hohe Verfügbarkeitsanforderung prägen den Zugang zu Anwendungen.
 - **Administrativer Kontext:** Die Nutzung der lokalen Support-Strukturen führt nicht automatisch zu administrativen Entra- oder Anwendungsrechten. Eine mögliche kontrollierte Delegation ist von `IAM-003` abhängig.
-- **Identity Source:** Workforce-Identität; primärer Source of Authority und Synchronisationsmodell sind in `IAM-004` offen.
+- **Identity Source:** Workforce-Identität. HR führt Beschäftigungs- und soweit vorhanden Standortdaten „Lager Nord“; AD ist für technisch notwendige On-Premises-Kontoattribute authoritative, solange kein späteres Cloud-first-SoA-Modell dies ablöst; Entra führt Cloud-Zugriffsattribute gemäß [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md). Die Synchronisationstechnologie bleibt offen.
 - **Typische Endgeräte:** Gemeinsam genutzte Windows-Endgeräte, Scanner und weitere Spezialgeräte in Logistikbereichen.
 - **Typische Anwendungen:** Logistik- und Lagerfachanwendungen sowie die für Schicht, Kommunikation und Support erforderlichen Anwendungen.
 - **Authentifizierungsanforderungen:** Der Zugriff muss einer Person nachvollziehbar zugeordnet werden, auch bei wechselnden oder gemeinsam genutzten Endgeräten. Ein konkretes Anmelde- und Sitzungsmodell für Shared Devices und Scanner ist noch offen.
@@ -36,7 +36,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Interne Logistikmitarbeitende des zweiten Logistikstandorts mit grundsätzlich vergleichbarem Betriebsmodell wie Lager Nord und eigenständigen lokalen Support-Strukturen. Der Standort kann später Pilotstandort sein; daraus folgt für diese Persona noch keine technische Sonderregel.
 - **Administrativer Kontext:** Eigenständiger lokaler Support begründet keine pauschalen administrativen Rechte. Ob und wie eine kontrollierte Delegation erfolgt, ist in `IAM-003` zu bewerten.
-- **Identity Source:** Workforce-Identität; die Quelle und das Synchronisationsmodell sind in `IAM-004` offen.
+- **Identity Source:** Workforce-Identität. HR führt Beschäftigungs- und soweit vorhanden Standortdaten „Lager Süd“; AD ist für technisch notwendige On-Premises-Kontoattribute authoritative, solange kein späteres Cloud-first-SoA-Modell dies ablöst; Entra führt Cloud-Zugriffsattribute gemäß [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md). Die Synchronisationstechnologie bleibt offen.
 - **Typische Endgeräte:** Gemeinsam genutzte Windows-Endgeräte, Scanner und weitere Spezialgeräte.
 - **Typische Anwendungen:** Logistik- und Lagerfachanwendungen sowie Anwendungen für Schicht, Kommunikation und Support.
 - **Authentifizierungsanforderungen:** Personenbezug und Nachvollziehbarkeit müssen trotz gemeinsamer Geräte und Schichtbetrieb erhalten bleiben. Das konkrete Anmelde- und Sitzungsmodell ist offen.
@@ -48,7 +48,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Interne Mitarbeitende und Marktleitungen in dezentralen Filialen. Die Persona umfasst keine zentrale Administration.
 - **Administrativer Kontext:** Marktleitungs- oder lokale Organisationsaufgaben beinhalten keine administrativen Rechte auf die Identity-Plattform. Ein etwaiger Delegationsbedarf ist noch nicht bewertet.
-- **Identity Source:** Workforce-Identität; die authoritative Quelle und das Synchronisationsmodell sind in `IAM-004` noch offen.
+- **Identity Source:** Workforce-Identität. HR führt Beschäftigungs-, Organisations- sowie soweit vorhanden Standort- und Filialdaten; AD ist für technisch notwendige On-Premises-Kontoattribute authoritative, solange kein späteres Cloud-first-SoA-Modell dies ablöst; Entra führt Cloud-Zugriffsattribute gemäß [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md). Die Synchronisationstechnologie bleibt offen.
 - **Typische Endgeräte:** Gemeinsam genutzte Geräte in den Filialen sowie gegebenenfalls persönliche Geräte für Marktleitung oder organisatorische Aufgaben. Die genaue Geräteklassifizierung ist noch nicht festgelegt.
 - **Typische Anwendungen:** Spezialisierte Filial- und Handelsfachanwendungen sowie die für Kommunikation und organisatorische Aufgaben notwendigen Anwendungen.
 - **Authentifizierungsanforderungen:** Zugriffe müssen einer Person zuordenbar bleiben, insbesondere bei gemeinsam genutzten Geräten. Konkrete Anmeldemethoden für Filialgeräte sind noch zu entscheiden.
@@ -60,7 +60,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Externe Dienstleister mit zeitlich und auftragsbezogen begrenztem Zugriff. Der geschäftlich verantwortliche Bereich muss den Zugriff fachlich begründen und verantworten; ein konkretes Sponsor- oder Genehmigungsmodell wird hier nicht festgelegt.
 - **Administrativer Kontext:** Externe Identitäten erhalten keine administrativen Rechte aufgrund ihres externen Status. Administrativer oder Support-Zugriff wäre nur als gesondert begründete, aufgabenspezifische Berechtigung zu behandeln.
-- **Identity Source:** Externe Identität. Das Zielmodell für externe Identitäten, einschließlich möglicher Bereitstellung und Synchronisation, ist in `IAM-004` offen.
+- **Identity Source:** Externe Identität. Ein noch nicht konkret benanntes Vertrags-/Sponsor-System führt Auftrag, Sponsor und Laufzeit; Entra führt das technische externe Zugriffsobjekt. Kollaborations- und Synchronisationsmodell sind gemäß [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md) weiterhin offen.
 - **Typische Endgeräte:** In der Regel durch den Dienstleister bereitgestellte Endgeräte; Anforderungen an deren Vertrauens- oder Compliance-Status sind noch nicht entschieden.
 - **Typische Anwendungen:** Nur die auftragsbezogenen Kollaborations-, Support- oder Fachanwendungen, die für die vereinbarte Leistung notwendig sind.
 - **Authentifizierungsanforderungen:** Starke, nachvollziehbare Authentifizierung ist erforderlich. Die konkrete Methode, die Behandlung externer Sicherheitsinformationen und die zulässigen Zugriffswege sind noch zu entscheiden.
@@ -72,7 +72,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Mitarbeitende mit administrativen Aufgaben in IT oder Informationssicherheit. Die Persona ist von der normalen Arbeitsidentität getrennt; administrative Aufgaben erfolgen mit einer separaten administrativen Identität.
 - **Administrativer Kontext:** Diese Persona führt nur die fachlich zugewiesenen Administrationsaufgaben aus; ihr genauer Rollen- und Zuständigkeitszuschnitt ist noch zu definieren.
-- **Identity Source:** Privilegierte Identität. Herkunft, Erzeugung und Lebenszyklus der separaten administrativen Identität werden in `IAM-004` festgelegt.
+- **Identity Source:** Privilegierte Identität. Die separate administrative Identität ist cloud-only und wird in Entra geführt; sie bleibt an eine aktive beziehungsweise genehmigte Workforce-Funktion gekoppelt. Freigabe- und PIM-Design bleiben gemäß [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md) offen.
 - **Typische Endgeräte:** Für administrative Tätigkeiten vorgesehene und besonders zu schützende Arbeitsplätze oder Zugriffswege. Der konkrete Standard für privilegierte Endgeräte ist noch offen.
 - **Typische Anwendungen:** Administrationsportale und Managementschnittstellen der zugelassenen Plattformen und Anwendungen, einschließlich Microsoft Entra ID, soweit die jeweilige Aufgabe dies erfordert.
 - **Authentifizierungsanforderungen:** Gegenüber Standardbenutzern stärkere Authentifizierung und restriktive Zugriffsbedingungen. Konkrete Authentication Strengths und zulässige Methoden sind noch nicht entschieden.
@@ -84,7 +84,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Ausschließlich für Notfälle bestimmte administrative Identität; keine Persona für tägliche Betriebsaufgaben. Ihre Nutzung ist streng zu überwachen.
 - **Administrativer Kontext:** Die Identität darf nur gemäß einem noch zu definierenden Notfallverfahren verwendet werden und ersetzt keine reguläre privilegierte Administration.
-- **Identity Source:** Emergency-Access-Identität. Account-Herkunft, Anzahl, Verwahrung und Wiederherstellungsprozess sind Teil des noch offenen Emergency-Access-Designs in `CA-003` und werden hier nicht entschieden.
+- **Identity Source:** Emergency-Access-Identität. Das cloud-only Konto und seine Rollen werden in Entra geführt; ein kontrolliertes Register führt Verantwortlichkeiten. Anzahl, Verwahrung, konkrete Schutzmaßnahmen und Wiederherstellungsprozess bleiben Teil des offenen Emergency-Access-Designs in `CA-003`.
 - **Typische Endgeräte:** Ausschließlich für einen kontrollierten Notfallzugriff vorgesehene oder nach dem späteren Notfallverfahren zugelassene Endgeräte. Ein konkreter Gerätestandard ist noch offen.
 - **Typische Anwendungen:** Nur die für die Wiederherstellung oder Sicherung des Identitäts- und Zugriffsservices notwendigen administrativen Oberflächen und Schnittstellen.
 - **Authentifizierungsanforderungen:** Der Notfallzugriff muss sicher, kontrolliert und auditierbar sein. Konkrete Methoden und Verfahren für den Fall, dass reguläre Zugriffsbedingungen nicht nutzbar sind, werden in `CA-003` festgelegt.
@@ -96,7 +96,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - `IAM-002`: Gruppenmodell sowie Abwägung gruppenbasierter und attributbasierter Zuweisungen.
 - `IAM-003`: Einsatz und Abgrenzung von Administrative Units für Lager und Filialen.
-- `IAM-004`: Primärer Source of Authority, Synchronisationsmodell und Quellen für Workforce-, externe und privilegierte Identitäten.
+- `IAM-004`: Source-of-Authority-Modell ist in ADR-0005 vorgeschlagen; Synchronisation, Korrelation und technische Mappings bleiben offen.
 - Folgetasks der CA-Phase: Konkrete Authentication Strengths, Gerätezustand, Risikoauswertung, Ausnahmen und Policy-Zuschnitte.
 - `CA-003`: Vollständiges Emergency-Access-Design einschließlich Ausnahmeumfang und Kompensationsmaßnahmen.
 - `GOV-001`: Verbindlicher Joiner/Mover/Leaver-Prozess mit auslösenden Ereignissen, Fristen und Verantwortlichkeiten.
