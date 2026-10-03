@@ -1,0 +1,60 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PowerShell / logs
+*.log
+*.tmp
+*.bak
+tmp/
+logs/
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.secret.*
+*.secrets.*
+secrets/
+private/
+credentials/
+certs/
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Tenant-specific exports
+exports/
+tenant-data/
+local-config/
+*.token
+*.cache
+
+# Test / tooling output
+coverage/
+TestResults/
+artifacts/
+dist/
+build/
+
+# Local assistant / agent metadata
+.chatgpt/
+.codex/
+.claude/
+.cursor/
+.aider*
+*.prompt.local.md
+
+# Python helpers if introduced later
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node helpers if introduced later
+node_modules/
