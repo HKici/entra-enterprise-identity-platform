@@ -172,3 +172,50 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 ### OPS-003 – Incident Learning
 
 **Status:** Planned
+
+---
+
+### SEC-001 – Compliance-Anforderungen definieren
+
+**Status:** Planned
+
+**Ziel:** NIS2- und KRITIS-orientierte Security- und Governance-Anforderungen als übergeordnete Architekturprinzipien für die IAM-Plattform dokumentieren.
+
+**Scope:**
+
+??? von hier bis ???ENDE könnten Zeilen eingefügt oder gelöscht sein
+- Least Privilege
+- starke Authentifizierung
+- privilegierter Zugriff
+- Auditierbarkeit
+- Access Reviews
+- Identity Lifecycle
+- Logging und Nachvollziehbarkeit
+- Incident-relevante IAM-Anforderungen
+
+**Abgrenzung:**
+
+Keine juristische Einstufung der Nordstern Handelsgruppe als KRITIS-Betreiber.
+
+### SEC-001 – Compliance-Anforderungen definieren
+
+**Status:** Planned
+
+**Ziel:** NIS2- und KRITIS-orientierte Security- und Governance-Anforderungen als übergeordnete Architekturprinzipien für die IAM-Plattform dokumentieren.
+
+**Scope:**
+
+- Least Privilege
+- starke Authentifizierung
+- privilegierter Zugriff
+- Auditierbarkeit
+- Access Reviews
+- Identity Lifecycle
+- Logging und Nachvollziehbarkeit
+- Incident-rele
+
+**Abgrenzung:**
+
+Keine juristische Einstufung der Nordstern Handelsgruppe als KRITIS-Betreiber.
+
+**Status** Planned
