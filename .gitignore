@@ -50,6 +50,11 @@ build/
 .aider*
 *.prompt.local.md
 
+# Private working material
+private-learning/
+notes-private/
+*.private.md
+
 # Python helpers if introduced later
 __pycache__/
 *.py[cod]

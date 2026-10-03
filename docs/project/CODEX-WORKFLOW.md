@@ -46,7 +46,7 @@ Zusätzlich fachlich prüfen:
 
 - Ist die IAM-Aussage korrekt?
 - Ist die Security-Wirkung verstanden?
-- Kann ich die Entscheidung im Interview erklären?
+- Ist die Entscheidung fachlich und betrieblich nachvollziehbar begründet?
 - Ist das Beispiel rein synthetisch?
 
 ### 5. Commit
@@ -60,7 +60,7 @@ git commit -m "docs: define enterprise identity personas"
 
 ### 6. Pull Request
 
-Auch bei Solo-Projekten ist ein PR-Workflow sinnvoll, wenn das Repository später öffentlich gezeigt wird.
+Ein PR-Workflow sichert auch für ein öffentliches Referenzprojekt nachvollziehbare Reviews und Änderungen.
 
 Der PR sollte beantworten:
 

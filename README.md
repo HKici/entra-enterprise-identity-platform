@@ -1,6 +1,6 @@
 # Entra Enterprise Identity Platform
 
-Referenzprojekt für den Entwurf einer skalierbaren Microsoft-Entra-ID-IAM-Plattform in einem fiktiven deutschen Handelsunternehmen.
+Referenzarchitektur für den Entwurf einer skalierbaren Microsoft-Entra-ID-IAM-Plattform in einem fiktiven deutschen Handelsunternehmen.
 
 Das Projekt verbindet **Identity Architecture**, **Conditional Access**, **Identity Governance**, **Application Onboarding**, **Microsoft Graph**, **PowerShell**, **Git** und nachvollziehbare Architekturentscheidungen.
 
@@ -29,8 +29,8 @@ Die bestehende Identity-Landschaft ist hybrid. Microsoft Entra ID soll schrittwe
 4. Automatisierte und versionierte Konfiguration
 5. Nachvollziehbare Architekturentscheidungen über ADRs
 6. Wiederholbare Änderungen über Git und Pull Requests
-7. Lernplattform für Enterprise IAM und Microsoft Entra ID
-8. Professionelles technisches Portfolio mit verständlichen Architekturdiagrammen
+7. Validierung und Weiterentwicklung von Enterprise-IAM-Architekturmustern
+8. Nachvollziehbare Architekturdiagramme als Teil der Referenzarchitektur
 9. Berücksichtigung von NIS2- und KRITIS-orientierten Security- und Governance-Anforderungen
 
 ## Technische Schwerpunkte
@@ -102,7 +102,6 @@ Siehe:
 - [Projektplan](docs/project/PROJEKTPLAN.md)
 - [Codex Workflow](docs/project/CODEX-WORKFLOW.md)
 - [Diagramm-Konventionen](docs/project/DIAGRAMME.md)
-- [Lernplan](docs/project/LERNPLAN.md)
 
 ## Sicherheitsprinzip
 
@@ -112,4 +111,4 @@ Keine produktiven Tenant-IDs, Domains, Benutzerkonten, IP-Adressen, Geheimnisse,
 
 ## Lizenz
 
-Dieses Projekt dient als technisches Portfolio- und Lernprojekt. Eine formale Open-Source-Lizenz wird bewusst erst später ausgewählt.
+Dieses Projekt dient als Enterprise-IAM-Referenz- und Architekturprojekt. Eine formale Open-Source-Lizenz wird bewusst erst später ausgewählt.
