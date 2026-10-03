@@ -52,29 +52,37 @@ Dezentral verteilte Standorte mit:
 
 ## Personas
 
-### Office User
+Die folgenden Personas beschreiben den fachlichen Kontext und die Sicherheitsanforderungen. Sie legen weder einen primären Source of Authority noch ein konkretes technisches Anmelde- oder Bereitstellungsmodell fest. Diese Entscheidungen sind in den jeweils nachgelagerten Tasks zu treffen.
 
-Normale Büroarbeitsplätze, primär persönliche Geräte.
+### Office User – Zentrale Hamburg
 
-### Warehouse User
+Mitarbeitende der zentralen Funktionen wie Geschäftsführung, Einkauf, Finanzen, HR, IT, Informationssicherheit und Vertrieb. Sie arbeiten überwiegend an persönlichen Büroarbeitsplätzen und benötigen Zugriff auf zentrale Kollaborations- und Fachanwendungen.
 
-Logistikmitarbeitende, teilweise wechselnde bzw. gemeinsam genutzte Geräte.
+### Warehouse User – Lager Nord
 
-### Store User
+Logistikmitarbeitende im Schichtbetrieb. Der Standort nutzt viele gemeinsam genutzte Windows-Endgeräte sowie Scanner und weitere Spezialgeräte; die lokale IT-Unterstützung ist eingeschränkt. Zugriffe müssen deshalb auch bei Gerätewechsel und in betrieblich zeitkritischen Abläufen nachvollziehbar bleiben.
 
-Mitarbeitende in Filialen.
+### Warehouse User – Lager Süd
+
+Logistikmitarbeitende in einem dem Lager Nord vergleichbaren Betriebsmodell. Die eigenständigen lokalen Support-Strukturen und die mögliche Rolle als Pilotstandort sind bei späteren Device- und Identity-Standards zu berücksichtigen, ohne für diese Persona vorzugreifen.
 
 ### External Contractor
 
-Zeitlich begrenzter Zugriff für externe Dienstleister.
+Externe Dienstleister mit auftrags- und zeitgebundenem Zugriff auf die jeweils benötigten Ressourcen. Ihre Identitätsquelle und das Modell für die Zusammenarbeit mit externen Identitäten sind noch nicht entschieden.
+
+### Store User – Filialen
+
+Mitarbeitende und Marktleitungen an dezentralen Filialstandorten. Sie verwenden teilweise gemeinsam genutzte Geräte und spezialisierte Fachanwendungen; die Anforderungen an Nachvollziehbarkeit und minimale Berechtigungen gelten standortunabhängig.
 
 ### Privileged Administrator
 
-Separate administrative Identität, stärkere Authentifizierung und restriktive Zugriffsbedingungen.
+Personen mit administrativen Aufgaben in IT oder Informationssicherheit. Administrative Tätigkeiten erfolgen gemäß Zielarchitektur mit separaten administrativen Identitäten, stärkerer Authentifizierung und restriktiven Zugriffsbedingungen.
 
 ### Emergency Access Administrator
 
-Nur für Notfälle. Streng überwacht und aus regulären CA-Policies gezielt ausgenommen.
+Nur für den Notfall vorgesehene administrative Identitäten. Ihre Nutzung ist streng zu überwachen; sie werden gezielt von regulären Conditional-Access-Policies ausgenommen. Das konkrete Emergency-Access-Design wird erst in `CA-003` festgelegt.
+
+Die detaillierte Beschreibung der organisatorischen, technischen und Lifecycle-Anforderungen je Persona befindet sich in [PERSONAS.md](../concepts/PERSONAS.md).
 
 ## Kernanforderungen
 
