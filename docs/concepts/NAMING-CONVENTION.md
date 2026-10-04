@@ -52,12 +52,27 @@ Entra Directory Roles und Application Roles sind keine Security Groups und verwe
 ### Conditional Access
 
 ```text
-CA001-Require-MFA-Workforce
-CA002-Require-Strong-Auth-Admins
-CA003-Block-Legacy-Authentication
-CA004-Protect-Security-Info-Registration
-CA005-Require-Compliant-Device-Admins
+CA-BL-001-Require-MFA-Workforce
+CA-BL-002-Require-MFA-Privileged-Admins
+CA-BL-003-Block-Legacy-Authentication
+CA-BL-004-Protect-Security-Info-Registration
+CA-BL-005-Require-MFA-Risky-SignIns
+CA-BL-006-Require-Risk-Remediation-High-User-Risk
+CA-BL-007-Require-MFA-External-Contractors
 ```
+
+Das Schema für Baseline-Policies lautet:
+
+```text
+CA-BL-<Sequence>-<Control>-<Scope>
+```
+
+- `BL` kennzeichnet eine Baseline-Policy und trennt ihre technische Kennung von Task-IDs wie `CA-003`.
+- `<Sequence>` ist eine dreistellige, innerhalb der Baseline eindeutige Nummer und wird nach einer Ausmusterung nicht wiederverwendet. Sie ist ausschließlich eine Kennung, keine Auswertungs- oder Prioritätsreihenfolge.
+- `<Control>` beschreibt die beabsichtigte Kontrolle auf Englisch im Pascal-Case.
+- `<Scope>` beschreibt den fachlichen Zielbereich, nicht zwingend eine konkrete Security Group.
+
+Policy-Zustand und Rollout-Welle sind keine Bestandteile des Namens. Sie werden getrennt dokumentiert, damit ein Wechsel von `report-only` zu Enforcement nicht zu einer Umbenennung führt.
 
 ### Administrative Units
 
