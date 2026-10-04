@@ -123,7 +123,16 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 ### CA-003 – Emergency Access Design
 
-**Status:** Planned  
+**Status:** Review
+**Ziel:** Cloud-only Emergency-Access-Konzept mit begründeten CA-Ausschlüssen, unabhängigen Zugangsmitteln und kontrolliertem Notfallbetrieb definieren.
+
+**Dateien:**
+
+- `docs/security/EMERGENCY-ACCESS.md`
+- `docs/adr/0008-emergency-access-break-glass-konzept.md`
+- `docs/security/CONDITIONAL-ACCESS-BASELINE.md`
+- `docs/concepts/PERSONAS.md`
+
 **Ergebnis:** ADR erforderlich.
 
 ### CA-004 – Policy JSON Schema
