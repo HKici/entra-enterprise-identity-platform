@@ -180,7 +180,17 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 ### GOV-002 – Lifecycle Workflows
 
-**Status:** Planned
+**Status:** Review
+**Ziel:** Microsoft Entra Lifecycle Workflows als begrenztes Orchestrierungswerkzeug innerhalb des JML-Modells bewerten.
+
+**Dateien:**
+
+- `docs/governance/LIFECYCLE-WORKFLOWS.md`
+- `docs/adr/0011-lifecycle-workflows-als-begrenzte-jml-orchestrierung.md`
+- `docs/governance/JOINER-MOVER-LEAVER.md`
+- `docs/architecture/SOURCE-OF-AUTHORITY.md`
+
+**Ergebnis:** ADR erforderlich.
 
 ### GOV-003 – Access Reviews
 

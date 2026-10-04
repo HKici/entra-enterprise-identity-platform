@@ -6,7 +6,7 @@ Status: **Entwurf (GOV-001)**
 
 Dieses Dokument definiert das fachliche Identity-Lifecycle-Modell der Nordstern Handelsgruppe für Workforce-, externe, privilegierte und Emergency-Access-Identitäten. Es ordnet fachliche Auslöser, Kontrollpunkte und erwartete Wirkungen zu. Es erstellt keine Lifecycle Workflows, keine Entra-Konfiguration, keine Synchronisationsregeln und keine Automatisierung.
 
-Das Modell setzt die Attributautorität aus dem [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md), die Trennung der Gruppenfamilien aus dem [Gruppenmodell](../concepts/GRUPPENMODELL.md) und die AU-Abgrenzung aus [Administrative Units](../concepts/ADMINISTRATIVE-UNITS.md) voraus. Die Architekturentscheidung ist in [ADR-0010](../adr/0010-joiner-mover-leaver-lifecycle-modell.md) mit Status `Proposed` dokumentiert.
+Das Modell setzt die Attributautorität aus dem [Source-of-Authority-Modell](../architecture/SOURCE-OF-AUTHORITY.md), die Trennung der Gruppenfamilien aus dem [Gruppenmodell](../concepts/GRUPPENMODELL.md) und die AU-Abgrenzung aus [Administrative Units](../concepts/ADMINISTRATIVE-UNITS.md) voraus. Die Architekturentscheidung ist in [ADR-0010](../adr/0010-joiner-mover-leaver-lifecycle-modell.md) mit Status `Proposed` dokumentiert. Die Bewertung von Microsoft Entra Lifecycle Workflows als möglichem Ausführungsbaustein steht in [LIFECYCLE-WORKFLOWS.md](LIFECYCLE-WORKFLOWS.md); GOV-001 bleibt die fachliche Quelle für Auslöser, Freigaben und Kontrollen.
 
 ## Grundsätze
 
