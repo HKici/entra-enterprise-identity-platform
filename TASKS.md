@@ -135,9 +135,17 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 **Ergebnis:** ADR erforderlich.
 
-### CA-004 – Policy JSON Schema
+### CA-004 – Authentication Methods & Authentication Strengths
 
-**Status:** Planned
+**Status:** Review
+**Ziel:** Fachliches Authentifizierungsmodell für Workforce, privilegierte, externe und Emergency-Access-Identitäten definieren.
+
+**Dateien:**
+
+- `docs/security/AUTHENTICATION-METHODS-AND-STRENGTHS.md`
+- `docs/adr/0009-authentication-methods-und-authentication-strengths.md`
+- `docs/security/CONDITIONAL-ACCESS-BASELINE.md`
+- `docs/security/EMERGENCY-ACCESS.md`
 
 ### CA-005 – Graph Export
 

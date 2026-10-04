@@ -52,7 +52,7 @@ Die Risikopolicies setzen Microsoft Entra ID Protection und eine entsprechende M
 
 Conditional-Access-Targeting über Directory Roles deckt weder Custom Roles noch AU-scoped Rollen ab. Für diese Rollen muss vor Enforcement ein ergänzender Scope separat validiert werden, ohne die Rollen- oder AU-Entscheidungen vorwegzunehmen. [Microsoft Learn: CA-Zielgruppen](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-users-groups)
 
-Die Baseline legt keine phishing-resistente Authentication Strength, keinen Compliance- oder Hybrid-Join-Nachweis und keine PIM-Konfiguration fest. Diese Anforderungen bleiben abhängig vom noch ausstehenden Authentifizierungs-, Device- und PIM-Design. Die `report-only`-Auswertung muss deshalb insbesondere administrative Sign-ins, verwendete Methoden, Gerätepfade und mögliche Emergency-Access-Treffer sichtbar machen.
+Für privilegierte Administratoridentitäten ist nach dem in [AUTHENTICATION-METHODS-AND-STRENGTHS.md](AUTHENTICATION-METHODS-AND-STRENGTHS.md) beschriebenen Zielmodell eine phishing-resistente Authentication Strength vorgesehen. CA-BL-002 bleibt bis zur Methoden-, Device- und PIM-Validierung `report-only`; die Auswertung muss insbesondere administrative Sign-ins, verwendete Methoden, Gerätepfade und mögliche Emergency-Access-Treffer sichtbar machen.
 
 ## Legacy Authentication
 
