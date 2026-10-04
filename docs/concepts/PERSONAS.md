@@ -105,4 +105,4 @@ Das Diagramm ordnet die Workforce-, externen, privilegierten und Emergency-Acces
 - `IAM-004`: Source-of-Authority-Modell ist in ADR-0005 vorgeschlagen; Synchronisation, Korrelation und technische Mappings bleiben offen.
 - Folgetasks der CA-Phase: Konkrete Authentication Strengths, Gerätezustand, Risikoauswertung, Ausnahmen und Policy-Zuschnitte.
 - `CA-003`: Vollständiges Emergency-Access-Design einschließlich Ausnahmeumfang und Kompensationsmaßnahmen.
-- `GOV-001`: Verbindlicher Joiner/Mover/Leaver-Prozess mit auslösenden Ereignissen, Fristen und Verantwortlichkeiten.
+- `GOV-001`: Der [Joiner/Mover/Leaver-Prozess](../governance/JOINER-MOVER-LEAVER.md) beschreibt auslösende Ereignisse, Verantwortlichkeiten und Kontrollpunkte; verbindliche Fristen bleiben Governance-Entscheidungen.

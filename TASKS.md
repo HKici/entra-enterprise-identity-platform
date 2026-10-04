@@ -165,7 +165,18 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 ### GOV-001 – Joiner/Mover/Leaver Prozess
 
-**Status:** Planned
+**Status:** Review
+**Ziel:** Fachliches Identity-Lifecycle-Modell für interne, externe, privilegierte und Emergency-Access-Identitäten definieren.
+
+**Dateien:**
+
+- `docs/governance/JOINER-MOVER-LEAVER.md`
+- `docs/adr/0010-joiner-mover-leaver-lifecycle-modell.md`
+- `docs/architecture/SOURCE-OF-AUTHORITY.md`
+- `docs/concepts/PERSONAS.md`
+- `docs/concepts/GRUPPENMODELL.md`
+
+**Ergebnis:** ADR erforderlich.
 
 ### GOV-002 – Lifecycle Workflows
 
