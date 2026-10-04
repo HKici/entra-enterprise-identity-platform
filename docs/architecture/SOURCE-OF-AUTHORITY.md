@@ -100,6 +100,8 @@ Die Risikobehandlung besteht aus Attribut-Ownership, kontrollierten Änderungen,
 
 Der fachliche Ablauf, die Kontrollpunkte und die Abgrenzung von Workforce-, externen, privilegierten und Emergency-Access-Lifecycles sind in [JOINER-MOVER-LEAVER.md](../governance/JOINER-MOVER-LEAVER.md) dokumentiert. Die dort beschriebenen Schritte ändern weder die Attributautorität noch das technische Synchronisationsdesign.
 
+Microsoft Entra Lifecycle Workflows können fachlich bestätigte Ereignisse nur innerhalb von Entra orchestrieren, wenn die benötigten Attribute und Objekte dort verfügbar sind. Sie sind keine zusätzliche Source of Authority; ihre begrenzte Rolle beschreibt [LIFECYCLE-WORKFLOWS.md](../governance/LIFECYCLE-WORKFLOWS.md).
+
 ## Offene Architekturfragen und Abhängigkeiten
 
 - Konkretes HR-System, Vertrags-/Sponsor-System und Device-Inventory-System sowie deren Datenqualität und Attributkataloge.
