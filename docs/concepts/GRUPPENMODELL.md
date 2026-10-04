@@ -6,7 +6,7 @@ Status: **Entwurf (IAM-002)**
 
 Dieses Dokument beschreibt ein nachvollziehbares Gruppenmodell für die Nordstern Handelsgruppe. Es trennt Personen- und Standortzugehörigkeit, fachliche Rollen sowie technische Zugriffszuweisungen. Das Modell dient als fachliche Referenz; es erzeugt keine Gruppen und legt keine produktive Entra-Konfiguration fest.
 
-Der Entwurf verwendet das in ADR-0005 vorgeschlagene Source-of-Authority-Modell für Beschäftigungs- und Standortattribute. Die technische Mitgliedschaftsverwaltung sowie das Synchronisationsmodell bleiben vom Architektur- und Security-Review, der Attributqualität und dem Joiner/Mover/Leaver-Prozess abhängig.
+Der Entwurf verwendet das in ADR-0005 vorgeschlagene Source-of-Authority-Modell für Beschäftigungs- und Standortattribute. Die technische Mitgliedschaftsverwaltung sowie das Synchronisationsmodell bleiben vom Architektur- und Security-Review, der Attributqualität und dem [Joiner/Mover/Leaver-Prozess](../governance/JOINER-MOVER-LEAVER.md) abhängig.
 
 ## Begriffe und Abgrenzung
 

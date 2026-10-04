@@ -29,7 +29,7 @@ Die Architekturentscheidung ist in [ADR-0005](../adr/0005-source-of-authority-fu
 | Interne Mitarbeitende – Filialen | Generisches HR-System. | Wie Zentrale Hamburg. | HR führt, soweit vorhanden, Standort und Filialcode; daraus folgen keine automatischen App-Berechtigungen. |
 | Externe Dienstleister | Noch nicht konkret benanntes Vertrags-/Sponsor-System für Auftrag, Sponsor und Laufzeit. | Entra für das bei Nordstern vorhandene externe Zugriffsobjekt und dessen Cloud-Zugriffszuweisungen; der externe Identitätsanbieter führt die Anmeldeinformationen. | Das konkrete Modell für externe Identitäten bleibt offen; der externe Status rechtfertigt keine Administratorrechte. |
 | Privileged Administrator | HR liefert die aktive beziehungsweise genehmigte Workforce-Funktion als Voraussetzung für die privilegierte Identität. | Die separate administrative Identität, ihre Cloud-Eigenschaften und die Entra-Rollenzuweisungen sind cloud-only und in Entra führend. | Eine HR-Änderung erzeugt oder erweitert keine privilegierte Identität ohne gesonderte, kontrollierte Freigabe. |
-| Emergency-Access-Identität | Kein HR- oder AD-Stammdatensatz ist Quelle für die Notfallidentität. Ein kontrolliertes Emergency-Access-Register führt Verantwortliche und Prüfpflichten. | Das Notfallkonto, seine Cloud-Eigenschaften und Rollen sind cloud-only und in Entra führend. | Anzahl, Verwahrung, konkrete Schutzmaßnahmen, Wiederherstellung und Tests werden in `CA-003` entschieden. |
+| Emergency-Access-Identität | Kein HR- oder AD-Stammdatensatz ist Quelle für die Notfallidentität. Ein kontrolliertes Emergency-Access-Register führt Verantwortliche und Prüfpflichten. | Das Notfallkonto, seine Cloud-Eigenschaften und Rollen sind cloud-only und in Entra führend. | Das Emergency-Access-Design ist in [CA-003](../security/EMERGENCY-ACCESS.md) und [ADR-0008](../adr/0008-emergency-access-break-glass-konzept.md) mit Status `Proposed` dokumentiert. Offen sind nur konkrete betriebliche Details, etwa Faktorwahl, Verwahrung, Alarmierungsziel und Testdurchführung. |
 
 „Generisches HR-System“ bezeichnet die fachliche Kategorie, nicht ein konkretes Produkt. Das Szenario legt kein HR-Produkt fest.
 
@@ -38,7 +38,7 @@ Die Architekturentscheidung ist in [ADR-0005](../adr/0005-source-of-authority-fu
 | Attributklasse | Führende Quelle | Relevanz für Gruppen, AUs und Lifecycle | Regeln |
 | --- | --- | --- | --- |
 | Personenkern, Beschäftigungsart und Beschäftigungsstatus | HR-System für interne Mitarbeitende | Grundlage für Joiner und Leaver; Beschäftigungsart unterscheidet Workforce von anderen Identitätsarten. | Nicht in AD oder Entra fachlich überschreiben. |
-| Eintritts-, Wechsel- und Austrittsdatum | HR-System für interne Mitarbeitende | Löst fachlich JML-Prüfungen aus; keine unmittelbare technische Berechtigung. | Fristen und technische Reaktion werden in `GOV-001` festgelegt. |
+| Eintritts-, Wechsel- und Austrittsdatum | HR-System für interne Mitarbeitende | Löst fachlich JML-Prüfungen aus; keine unmittelbare technische Berechtigung. | Der JML-Prozess in `GOV-001` ordnet Kontrollpunkte zu; Fristen und technische Reaktion bleiben Governance-Entscheidungen. |
 | Abteilung, Kostenstelle, fachliche Funktion und Manager | HR-System für interne Mitarbeitende | Kann Persona- oder Business-Role-Prüfungen unterstützen. | Nicht direkt als App- oder Entra-Rolle verwenden. |
 | Standort und Filialcode | HR-System für interne Mitarbeitende, soweit die Attribute dort vorhanden und gepflegt sind | Prüfbasis für Site Groups und später für die direkte Mitgliedschaft in `AU-Warehouse-North`, `AU-Warehouse-South` oder `AU-Stores`. | Ein Standortwechsel löst Review aus, verleiht aber keine Access Group oder AU-Rolle. |
 | On-Premises-Kontobezeichnung, DN, technisch notwendige AD-Kontoattribute und lokale Gruppenbezüge | On-Premises AD, sofern ein AD-Konto erforderlich ist und kein späteres Cloud-first-SoA-Modell die Autorität ablöst | Technische Abhängigkeit lokaler Anwendungen und Geräte. | Der technische Zustand folgt dem HR-geführten Beschäftigungsstatus; genaue Mappings und Korrelation sind offen. |
@@ -49,7 +49,7 @@ Die Architekturentscheidung ist in [ADR-0005](../adr/0005-source-of-authority-fu
 | Auftrag, Sponsor und Vertragslaufzeit externer Dienstleister | Noch nicht konkret benanntes Vertrags-/Sponsor-System | Grundlage für externe Joiner, Änderungen und Entzug. | System, Attributkatalog und Genehmigungsablauf sind offen. |
 | Externes Zugriffsobjekt, Cloud-Access-Groups und Anwendungszuweisungen | Microsoft Entra ID | Technische Umsetzung der genehmigten externen Zugriffe. | Keine Annahme zu B2B, Synchronisation oder Anmeldemethode. |
 | Privilegierte Identität, Entra-Rollen und administrative Zugriffszuweisungen | Microsoft Entra ID | Separater privilegierter Lifecycle; Basis für PIM und Access Reviews. | An eine aktive beziehungsweise genehmigte Workforce-Funktion gekoppelt; die spätere Genehmigungs- und PIM-Instanz wird noch bestimmt. |
-| Emergency-Access-Konto und technische Notfallrollen | Microsoft Entra ID | Notfallzugriff und Auditierung. | Anzahl, Verwahrung, konkrete Schutzmaßnahmen, Verantwortlichkeiten und Tests folgen dem späteren Emergency-Access-Design. |
+| Emergency-Access-Konto und technische Notfallrollen | Microsoft Entra ID | Notfallzugriff und Auditierung. | Das vorgeschlagene Modell in [CA-003](../security/EMERGENCY-ACCESS.md) und [ADR-0008](../adr/0008-emergency-access-break-glass-konzept.md) definiert die Architektur; offen bleiben konkrete betriebliche Details wie Faktorwahl, Verwahrung, Alarmierungsziel und Testdurchführung. |
 
 ## Bewusst cloud-only geführte Objekte
 
@@ -96,7 +96,9 @@ Die Risikobehandlung besteht aus Attribut-Ownership, kontrollierten Änderungen,
 | Leaver – interne Mitarbeitende | HR-geführtes Austritts- oder Inaktivitätsereignis. | Löst den Entzug oder die Sperrung technischer Workforce-Zugriffe und eine gesonderte Prüfung aller privilegierten Identitäten aus. Zeitpunkte und Automatisierung bleiben Governance-Entscheidungen. |
 | Joiner/Mover/Leaver – externe Dienstleister | Beginn, Änderung oder Ende eines Auftrags im noch nicht konkret benannten Vertrags-/Sponsor-System. | Löst die Prüfung und Anpassung des Entra-Zugriffsobjekts sowie zeitlich begrenzter Access Groups aus. |
 | Privilegierter Lifecycle | Aktive beziehungsweise genehmigte Workforce-Funktion, genehmigte administrative Aufgabe, Entzug der Aufgabe oder Ende der Workforce-Berechtigung. | Wird separat vom Workforce-Lifecycle geführt; die Entra-Identität und Rollen erhalten einen eigenen Review- und Entzugsprozess. |
-| Emergency Access | Änderung der Verantwortlichkeiten oder des Notfallverfahrens. | Kein automatischer HR- oder AD-gesteuerter Lifecycle. Änderungen folgen dem kontrollierten Emergency-Access-Prozess in `CA-003`. |
+| Emergency Access | Änderung der Verantwortlichkeiten oder des Notfallverfahrens. | Kein automatischer HR- oder AD-gesteuerter Lifecycle. Änderungen folgen dem kontrollierten Emergency-Access-Prozess in [CA-003](../security/EMERGENCY-ACCESS.md) und [ADR-0008](../adr/0008-emergency-access-break-glass-konzept.md), jeweils `Proposed`. |
+
+Der fachliche Ablauf, die Kontrollpunkte und die Abgrenzung von Workforce-, externen, privilegierten und Emergency-Access-Lifecycles sind in [JOINER-MOVER-LEAVER.md](../governance/JOINER-MOVER-LEAVER.md) dokumentiert. Die dort beschriebenen Schritte ändern weder die Attributautorität noch das technische Synchronisationsdesign.
 
 ## Offene Architekturfragen und Abhängigkeiten
 
@@ -106,4 +108,5 @@ Die Risikobehandlung besteht aus Attribut-Ownership, kontrollierten Änderungen,
 - Zulässige Dynamik für Persona- und Site-Groups nach Attributqualitätsprüfung; Access Groups bleiben davon getrennt.
 - Zuständigkeiten, Fristen und Automatisierungsgrad für `GOV-001` sowie Reviews für privilegierte Identitäten und AUs.
 - Externes Kollaborations- und Authentifizierungsmodell.
-- PIM- und Emergency-Access-Design einschließlich der Führung des zugehörigen Kontrollregisters.
+- PIM-Design einschließlich Rollen-, Aktivierungs- und Governance-Modell.
+- Konkrete betriebliche Emergency-Access-Details, insbesondere Faktorwahl, Verwahrung, Alarmierungsziel, Incident-Rollen und Testdurchführung; das Architekturmodell selbst ist in CA-003 und ADR-0008 vorgeschlagen.
