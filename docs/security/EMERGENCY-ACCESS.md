@@ -39,6 +39,8 @@ Für **jedes** Konto wird vor Einführung mindestens ein phishing-resistentes Ve
 
 Microsoft nennt FIDO2-Sicherheitsschlüssel und zertifikatsbasierte Authentifizierung als phishing-resistente Beispiele und empfiehlt, für Emergency Access Verfahren einzusetzen, die sich von normalen Administratorkonten unterscheiden. [Microsoft Learn: Emergency Access](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access)
 
+Das allgemeine Methoden- und Strength-Modell für Workforce, privilegierte und externe Identitäten steht in [AUTHENTICATION-METHODS-AND-STRENGTHS.md](AUTHENTICATION-METHODS-AND-STRENGTHS.md). Emergency Access besitzt einen separat validierten Methoden- und Faktor-Scope: Es übernimmt keine normalen Workforce-Bootstrap- oder Recovery-Flows; seine Faktoren und deren Lifecycle sind von regulären Administratoridentitäten getrennt. Die Konten bleiben technisch von Microsoft Entra Authentication und den für ihren Scope zugelassenen Methoden abhängig, jedoch nicht von AD, Hybrid Sync, Föderation, PIM oder regulären Workforce-Faktoren.
+
 ## Verwahrung, Freigabe und Vier-Augen-Prinzip
 
 Zugangsmittel, Kontenbezeichnungen und konkrete Verwahrinformationen werden nicht in diesem Repository dokumentiert. Sie werden in einem zugriffsbeschränkten Emergency-Access-Register geführt.
