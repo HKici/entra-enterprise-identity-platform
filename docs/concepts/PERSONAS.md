@@ -84,7 +84,7 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 
 - **Organisatorischer Kontext:** Ausschließlich für Notfälle bestimmte administrative Identität; keine Persona für tägliche Betriebsaufgaben. Ihre Nutzung ist streng zu überwachen.
 - **Administrativer Kontext:** Die Identität darf nur gemäß einem noch zu definierenden Notfallverfahren verwendet werden und ersetzt keine reguläre privilegierte Administration.
-- **Identity Source:** Emergency-Access-Identität. Das cloud-only Konto und seine Rollen werden in Entra geführt; ein kontrolliertes Register führt Verantwortlichkeiten. Anzahl, Verwahrung, konkrete Schutzmaßnahmen und Wiederherstellungsprozess bleiben Teil des offenen Emergency-Access-Designs in `CA-003`.
+- **Identity Source:** Emergency-Access-Identität. Das cloud-only Konto und seine Rollen werden in Entra geführt; ein kontrolliertes Register führt Verantwortlichkeiten. Anzahl, Verwahrung, konkrete Schutzmaßnahmen und Wiederherstellungsprozess sind im [Emergency-Access-Design](../security/EMERGENCY-ACCESS.md) für `CA-003` beschrieben.
 - **Typische Endgeräte:** Ausschließlich für einen kontrollierten Notfallzugriff vorgesehene oder nach dem späteren Notfallverfahren zugelassene Endgeräte. Ein konkreter Gerätestandard ist noch offen.
 - **Typische Anwendungen:** Nur die für die Wiederherstellung oder Sicherung des Identitäts- und Zugriffsservices notwendigen administrativen Oberflächen und Schnittstellen.
 - **Authentifizierungsanforderungen:** Der Notfallzugriff muss sicher, kontrolliert und auditierbar sein. Konkrete Methoden und Verfahren für den Fall, dass reguläre Zugriffsbedingungen nicht nutzbar sind, werden in `CA-003` festgelegt.

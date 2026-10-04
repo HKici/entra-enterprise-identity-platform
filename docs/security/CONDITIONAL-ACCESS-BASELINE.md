@@ -124,6 +124,8 @@ Ausschlüsse senken den Schutz und sind deshalb keine Lösung für nicht geteste
 
 Microsoft weist darauf hin, dass Emergency-Access-Konten bei einschränkenden Policies nicht verfügbar sein können und dass `report-only` noch keine technische Ausnahme benötigt. Die konkrete Ausgestaltung folgt dennoch bewusst erst dem separaten Emergency-Access-Design. [Microsoft Learn: Emergency Access](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access)
 
+Das konkrete Modell für cloud-only Konten, direkte CA-Ausschlüsse, kompensierende Kontrollen, Monitoring und Tests ist in [EMERGENCY-ACCESS.md](EMERGENCY-ACCESS.md) beschrieben. Die dort vorgeschlagene Architekturentscheidung ist bis zum Review in ADR-0008 als `Proposed` markiert.
+
 ## Offene Fragen und Abhängigkeiten
 
 - Verbindliche Authentication Strengths, zugelassene MFA-Methoden und deren Eignung für reguläre, privilegierte und externe Identitäten.
