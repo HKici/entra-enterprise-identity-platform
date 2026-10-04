@@ -126,5 +126,5 @@ Enthält:
 Beispiel:
 
 ```md
-![Zielarchitektur](../diagrams/rendered/target-architecture.svg)
+![Hybrid-Identity-Zielarchitektur](../diagrams/rendered/hybrid-identity-target-architecture.svg)
 ```

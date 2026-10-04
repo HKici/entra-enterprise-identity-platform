@@ -91,6 +91,10 @@ Die verbindlichen Regeln stehen in [`AGENTS.md`](AGENTS.md).
     └── nordstern-handelsgruppe/
 ```
 
+## Architekturdokumentation
+
+Die [Architekturdokumentation](docs/README.md) erschließt Architektur, Identity- und Access-Modelle, Security-Designs, ADRs und Diagramme strukturiert.
+
 ## Projektstatus
 
 **Phase 0 – Projektgrundlage**
