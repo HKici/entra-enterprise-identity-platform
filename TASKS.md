@@ -103,11 +103,23 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 ### CA-001 – CA-Namensschema finalisieren
 
-**Status:** Planned
+**Status:** Review
+**Ziel:** Nachvollziehbares Namensschema für Conditional-Access-Baseline-Policies festlegen.
+
+**Dateien:**
+
+- `docs/concepts/NAMING-CONVENTION.md`
+- `docs/security/CONDITIONAL-ACCESS-BASELINE.md`
 
 ### CA-002 – Baseline Policies fachlich beschreiben
 
-**Status:** Planned
+**Status:** Review
+**Ziel:** Conditional-Access-Baseline fachlich beschreiben und ausschließlich in `report-only` einordnen.
+
+**Dateien:**
+
+- `docs/security/CONDITIONAL-ACCESS-BASELINE.md`
+- `docs/adr/0007-conditional-access-baseline-modell.md`
 
 ### CA-003 – Emergency Access Design
 
