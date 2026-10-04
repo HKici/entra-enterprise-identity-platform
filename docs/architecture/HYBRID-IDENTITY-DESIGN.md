@@ -14,6 +14,12 @@ Microsoft Entra ID ist die zentrale Cloud-Identity- und Access-Control-Plane. AD
 
 Pro Objekt darf zu einem Zeitpunkt nur ein Synchronisationstool aktiv Änderungen nach Entra exportieren. Connect Sync und Cloud Sync dürfen nicht parallel dieselbe Benutzer-, Gruppen- oder Geräteidentität aktiv nach Entra exportieren.
 
+## Hybrid-Identity-Zielarchitektur
+
+![Hybrid-Identity-Zielarchitektur der Nordstern Handelsgruppe](../diagrams/rendered/hybrid-identity-target-architecture.svg)
+
+Das Diagramm zeigt die fachliche und technische Attributführung, den gezielten Hybrid-Scope sowie die cloud-only Identitätsklassen. Die Wahl zwischen Microsoft Entra Connect Sync und Microsoft Entra Cloud Sync bleibt ausdrücklich offen.
+
 ## Objektumfang
 
 | Objektklasse | Vorgesehener Umgang | Begründung |

@@ -84,6 +84,12 @@ Nur für den Notfall vorgesehene administrative Identitäten. Ihre Nutzung ist s
 
 Die detaillierte Beschreibung der organisatorischen, technischen und Lifecycle-Anforderungen je Persona befindet sich in [PERSONAS.md](../concepts/PERSONAS.md).
 
+## Unternehmens- und Standortmodell
+
+![Unternehmens- und Standortmodell der Nordstern Handelsgruppe](../diagrams/rendered/company-location-model.svg)
+
+Das Diagramm zeigt die zentrale Verwaltung, die dezentralen Betriebsstandorte und externe Dienstleister im Verhältnis zur zentralen Identity-Plattform.
+
 ## Kernanforderungen
 
 - einheitliche Identitätsplattform
