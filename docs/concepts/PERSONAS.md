@@ -92,6 +92,12 @@ Die Begriffe „Identity Source“ und „Berechtigungsmodell“ sind deshalb je
 - **Conditional-Access-Besonderheiten:** Diese Identitäten werden gemäß Unternehmensszenario gezielt von regulären CA-Policies ausgenommen und streng überwacht. Der genaue Ausnahmeumfang, die Kompensationsmaßnahmen und die Validierung sind explizit in `CA-003` zu entscheiden.
 - **Joiner/Mover/Leaver-Besonderheiten:** Änderungen an Verantwortlichkeiten, Berechtigungen oder dem Notfallverfahren benötigen einen kontrollierten und auditierbaren Prozess. Die konkreten Prüfintervalle, Zuständigkeiten und Wiederherstellungstests sind noch offen.
 
+## Persona- und Identity-Modell
+
+![Persona- und Identity-Modell der Nordstern Handelsgruppe](../diagrams/rendered/persona-identity-model.svg)
+
+Das Diagramm ordnet die Workforce-, externen, privilegierten und Emergency-Access-Identitäten ihren unterschiedlichen Identitäts- und Administrationskontexten zu.
+
 ## Offene Architekturfragen und Abhängigkeiten
 
 - `IAM-002`: Gruppenmodell sowie Abwägung gruppenbasierter und attributbasierter Zuweisungen.

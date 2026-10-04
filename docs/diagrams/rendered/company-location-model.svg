@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Unternehmens- und Standortmodell der Nordstern Handelsgruppe</title>
+  <desc id="desc">Die zentrale Microsoft-Entra-ID-Plattform verbindet die Zentrale Hamburg, Lager Nord, Lager Süd, Filialen und externe Dienstleister.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1d4ed8"/></marker><marker id="externalArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c2410c"/></marker></defs>
+  <rect width="1200" height="700" fill="#fff"/>
+  <text x="60" y="62" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0f172a">Unternehmens- und Standortmodell – zentrale Identity-Plattform für dezentrale Betriebsstandorte</text>
+  <rect x="400" y="120" width="400" height="85" rx="10" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="600" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#0f172a">Microsoft Entra ID</text>
+  <text x="600" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Zentrale Cloud-Identity- und Access-Control-Plane</text>
+  <path d="M180 330 V265 H455 V205" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M450 330 V245 H520 V205" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M720 330 V245 H680 V205" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M990 330 V265 H745 V205" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="600" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#334155">Identity- und Access-Control-Plane</text>
+  <g font-family="Arial, sans-serif" fill="#0f172a" text-anchor="middle">
+    <rect x="60" y="330" width="240" height="125" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/><text x="180" y="360" font-size="16" font-weight="700">Zentrale Hamburg</text><text x="180" y="388" font-size="13">Zentrale Funktionen und Fachbereiche</text><text x="180" y="410" font-size="13">Überwiegend persönliche Büroarbeitsplätze</text>
+    <rect x="330" y="330" width="240" height="125" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/><text x="450" y="360" font-size="16" font-weight="700">Lager Nord</text><text x="450" y="388" font-size="13">Schichtbetrieb und hohe Verfügbarkeit</text><text x="450" y="410" font-size="13">Gemeinsam genutzte Windows-Geräte und Scanner</text>
+    <rect x="600" y="330" width="240" height="125" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/><text x="720" y="360" font-size="16" font-weight="700">Lager Süd</text><text x="720" y="388" font-size="13">Schichtbetrieb und lokale Support-Strukturen</text><text x="720" y="410" font-size="13">Gemeinsam genutzte Windows-Geräte und Scanner</text>
+    <rect x="870" y="330" width="240" height="125" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/><text x="990" y="360" font-size="16" font-weight="700">Filialen</text><text x="990" y="388" font-size="13">Dezentral verteilte Standorte</text><text x="990" y="410" font-size="13">Gemeinsam genutzte Geräte und Fachanwendungen</text>
+  </g>
+  <path d="M990 535 V495 H780 V205" fill="none" stroke="#c2410c" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#externalArrow)"/>
+  <text x="940" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#9a3412">kontrollierter externer Zugriff</text>
+  <rect x="870" y="535" width="240" height="105" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" fill="#0f172a" text-anchor="middle"><text x="990" y="566" font-size="16" font-weight="700">Externe Dienstleister</text><text x="990" y="592" font-size="13">Zeitlich und auftragsbezogener Zugriff</text><text x="990" y="614" font-size="13">Kein Teil der internen Workforce</text></g>
+</svg>

@@ -83,13 +83,14 @@ Codex soll immer nur **einen klar abgegrenzten Task** bearbeiten.
 
 ### IAM-006 – Erste Architekturdiagramme erstellen
 
-**Status:** Ready after IAM-001  
-**Ziel:** erste Diagramme für Standortmodell und Personas erstellen.
+**Status:** Review
+**Ziel:** erste Diagramme für Standortmodell, Personas und Hybrid Identity erstellen.
 
 **Diagramme:**
 
 1. Unternehmens-/Standortmodell
 2. Persona-/Identity-Modell
+3. Hybrid-Identity-Zielarchitektur
 
 **Dateien:**
 
